@@ -122,11 +122,7 @@ fi
 # Find virtualization system and change password and extend disk
 
 virtualization=$(systemd-detect-virt)
-
-if [ $virtualization = vmware ] ; then
-    echo "root:$6" | chpasswd
-
-    if [ $7 = yes ]; then
+    if [ $6 = yes ]; then
         
         if [ "$OS_ACTUAL" = Debian  ] ; then
         
